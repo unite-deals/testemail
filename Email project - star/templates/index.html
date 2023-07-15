@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bulk Email Sender</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Bulk Email Sender</h1>
+    <form method="POST" action="/" enctype="multipart/form-data">
+      <label for="csv-file">CSV File:</label>
+      <input type="file" id="csv-file" name="csv-file" accept=".csv" required>
+
+      <label for="image-file">Image Attachment:</label>
+      <input type="file" id="image-file" name="image-file" accept="image/*">
+
+      <label for="video-file">Video Attachment:</label>
+      <input type="file" id="video-file" name="video-file" accept="video/*">
+
+      <button type="submit">Send Emails</button>
+    </form>
+  </div>
+</body>
+</html>
